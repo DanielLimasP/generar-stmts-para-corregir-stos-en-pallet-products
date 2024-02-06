@@ -11,7 +11,7 @@
  
 ## Cómo ejecutar el script
 
-1. Identificar los embarques que tienen el problema de 'No se puede efectuar una EM para $pedido$ $posición$' con el `query` `selectShipmentsWithProblems.sql`. 
+1. Identificar los embarques que tienen el problema de 'No se puede efectuar una EM para #pedido# #posición#' con el `query` `selectShipmentsWithProblems.sql`. 
 2. Obtener los `shipmentIds` correspondientes a los embarques que cuentan con problemas. Es necesario crear una lista de `shipmentIds` separados por comas, de manera que puedan alimentar al `query` del siguiente paso.
 3. Obtener los registros de `palletsproducts` utilizando los `shipmentIds` obtenidos en el paso anterior. Para esto, hay que alimentar al `query` de `selectShipmentsPalletProducts.sql` con los `shipmentIds` obtenidos anteriormente.
 4. Exportar los registros de `palletsproducts` obtenidos a un archivo de formato `JSON` llamado `palletProducts.json`.
