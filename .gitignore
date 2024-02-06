@@ -1,5 +1,6 @@
 *.xlsx
 *.txt
+updatePalletProductStatements.sql
 node_modules/
 yarn.lock
 package-lock.json
