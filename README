@@ -17,6 +17,6 @@
 4. Exportar los registros de `palletsproducts` obtenidos a un archivo de formato `JSON` llamado `palletProducts.json`.
 5. Mover el archivo obtenido en el paso anterior al directorio de `./data/json/`. El directorio anterior se debe de encontrar dentro del repositorio. Sobreescribir el archivo anterior en caso de que lo solicite.
 6. Ejecutar la instrucción de `node .` en la terminal adjunta del editor de código.
-7. Copiar y pegar las instrucciones generadas en el archivo `palletProductsPatchStatements.sql`, en el cliente de base de datos con conexión a productivo.
+7. Copiar y pegar las instrucciones generadas en el archivo `updatePalletProductStatements.sql`, en el cliente de base de datos con conexión a productivo.
 8. Validar que los `update statements` generados realizan la operación deseada.
 9. Ejecutar los `update statements`. 

@@ -65,13 +65,13 @@ writeSqlStatementsToPatchPalletProducts = () => {
         id: palletProduct.id,
         ...dataForPatch,
       });
-      const msg = `Patching palletProduct ${store}-${shipment}-${sapNumber}`;
+      const msg = `Writing stmt to UPDATE palletProduct ${store}-${shipment}-${sapNumber}`;
       console.log(msg);
     } else {
       noDataForPatchElements.push(palletProduct);
     }
   }
-  fs.writeFileSync("./data/sql/palletProductsPatchStatements.sql", queries);
+  fs.writeFileSync("./data/generated/updatePalletProductStatements.sql", queries);
   writeXlsxReport("noDataForPatchElements", noDataForPatchElements);
   writeXlsxReport("patchedPalletProducts", patchedPalletProducts);
 };
