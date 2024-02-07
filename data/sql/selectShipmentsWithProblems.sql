@@ -1,6 +1,5 @@
 select 
-	a.id as "shipmentId",
-	b.id as "shipmentLocationId",
+	a.id,
 	a.name as "shipment",
 	b.externalId as "externalId",
 	c.externalId as "cedis",
@@ -27,5 +26,6 @@ where
 	b.sapTransferMovements is not null and 
 	b.readyToLeaveAt is null and
 	b.deletedAt is null and 
-	b.createdAt > DATE_SUB(NOW(), INTERVAL 60 DAY)
+	b.createdAt > DATE_SUB(NOW(), INTERVAL 60 DAY) 
+		and (b.sapTransferMovements like "%Para el pedido%" or b.sapTransferMovements like "%Los datos del doc%") 	
 order by arrivedAt desc;
